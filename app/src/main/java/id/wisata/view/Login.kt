@@ -13,7 +13,6 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
-import id.wisata.HomeActivity
 import id.wisata.R
 import kotlinx.android.synthetic.main.sign_in_layout.*
 
@@ -76,7 +75,7 @@ class Login  : AppCompatActivity() {
             Toast.makeText(this, "Hello"+
                     "${user.displayName}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this@Login, HomeActivity::class.java))
+            startActivity(Intent(this@Login, Home::class.java))
             finish()
         }
     }
