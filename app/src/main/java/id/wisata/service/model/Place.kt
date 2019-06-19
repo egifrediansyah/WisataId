@@ -1,4 +1,4 @@
-package id.wisata
+package id.wisata.service.model
 
 class Place {
 

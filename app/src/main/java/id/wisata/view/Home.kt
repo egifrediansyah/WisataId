@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import id.wisata.Place
+import id.wisata.service.model.Place
 import id.wisata.R
 import id.wisata.RecyclerViewAdapter
 
