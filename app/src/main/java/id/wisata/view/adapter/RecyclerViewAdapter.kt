@@ -1,4 +1,4 @@
-package id.wisata
+package id.wisata.view.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import id.wisata.R
 import id.wisata.service.model.Place
 
 class RecyclerViewAdapter(private val ctx: Context, private val data: List<Place>) :
