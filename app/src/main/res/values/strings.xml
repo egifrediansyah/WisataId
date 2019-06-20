@@ -15,4 +15,13 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+<<<<<<< HEAD
+=======
+
+    <!--//bottomnav-->
+    <string name="leftMenu">Sidebar</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+
+>>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
 </resources>

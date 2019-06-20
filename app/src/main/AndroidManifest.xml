@@ -22,7 +22,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".view.Home">
+=======
+        <activity android:name=".view.ui.MainActivity">
+>>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
         </activity>
     </application>
 

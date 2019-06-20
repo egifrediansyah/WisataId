@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
@@ -26,4 +27,16 @@
     >
     </android.support.v7.widget.RecyclerView>
 
+=======
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+    </android.support.v7.widget.RecyclerView>
+>>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
 </LinearLayout>
