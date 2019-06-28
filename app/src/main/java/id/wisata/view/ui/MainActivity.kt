@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity(),  BottomNavigationView.OnNavigationItem
         when (item.getItemId()) {
             R.id.home_menu -> fragment = HomeFragment()
             R.id.search_menu -> fragment = SearchFragment()
-            R.id.left_nav -> fragment = LeftNavFragment()
+//            R.id.left_nav -> fragment = LeftNavFragment()
 
         }
         return loadFragment(fragment)

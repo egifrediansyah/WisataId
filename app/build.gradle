@@ -53,6 +53,9 @@ dependencies {
 
     //CardView
     implementation 'com.android.support:cardview-v7:28.0.0'
+
+    //SearchBar
+    implementation 'com.github.mancj:MaterialSearchBar:0.7.1'
 }
 
 apply plugin : 'com.google.gms.google-services'
