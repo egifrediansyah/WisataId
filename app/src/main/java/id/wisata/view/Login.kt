@@ -76,7 +76,6 @@ class Login  : AppCompatActivity() {
             Toast.makeText(this, "Hello"+
                     "${user.displayName}",
                 Toast.LENGTH_SHORT).show()
-            startActivity(Intent(this@Login, Home::class.java))
             startActivity(Intent(this@Login, MainActivity::class.java))
             finish()
         }

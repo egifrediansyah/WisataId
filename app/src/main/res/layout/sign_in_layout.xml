@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
+<<<<<<< HEAD
+        xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+=======
         xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
         android:id="@+id/sign_in_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -8,6 +12,40 @@
         android:orientation="vertical"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".view.Login"
+<<<<<<< HEAD
+        android:background="#00BFFF">
+
+    <android.support.v7.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="600dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#6495ED"
+            app:cardCornerRadius="@dimen/activity_vertical_margin"
+    >
+    <ImageView android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/wisata"
+    />
+    <com.google.android.gms.common.SignInButton
+            android:id="@+id/sign_in_button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#4169E1"
+            android:outlineAmbientShadowColor="#4169E1"
+            android:layout_marginTop="50dp"
+    />
+        <TextView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="Selamat Datang.."
+                  android:textSize="35dp"
+                  android:textColor="#FFFF"
+                  android:textAlignment="center"
+                  android:layout_marginTop="430dp"
+                  android:textStyle="bold"
+        />
+    </android.support.v7.widget.CardView>
+=======
 >
 
     <com.google.android.gms.common.SignInButton
@@ -16,4 +54,5 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
     />
+>>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
 </FrameLayout>
