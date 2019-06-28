@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<android.support.v7.widget.LinearLayoutCompat
-=======
 <android.support.v7.widget.CardView
->>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="110dp"
         android:layout_height="110dp"
@@ -14,49 +10,27 @@
 
 
 >
-<<<<<<< HEAD
-<android.support.v7.widget.CardView
-=======
-<FrameLayout
->>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="5dp"
-<<<<<<< HEAD
-        app:cardBackgroundColor="#6495ED"
-        app:cardCornerRadius="@dimen/activity_vertical_margin"
-=======
->>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
->
-    <ImageView
-            android:id="@+id/placePicture"
+    <FrameLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="5dp"
+    >
+        <ImageView
+                android:id="@+id/placePicture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
-    />
+        />
 
 
-    <TextView
-            android:id="@+id/placeName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:textSize="11dp"
-            android:textStyle="bold"
-            android:textColor="#FFFF"
-            android:text="Merapi"
-            android:layout_gravity="bottom"
-            android:textAlignment="center"
-    />
+        <TextView
+                android:id="@+id/placeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Merapi"
+                android:layout_gravity="bottom"
+                android:background="#fff"
+        />
+    </FrameLayout>
 </android.support.v7.widget.CardView>
-
-</android.support.v7.widget.LinearLayoutCompat>
-=======
-            android:text="Merapi"
-            android:layout_gravity="bottom"
-            android:background="#fff"
-    />
-</FrameLayout>
-</android.support.v7.widget.CardView>
->>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac

@@ -12,7 +12,7 @@ import android.view.View
 import id.wisata.R
 import id.wisata.service.model.Place
 import java.util.ArrayList
-
+import id.wisata.view.adapter.RecyclerViewAdapter
 
 class HomeFragment : Fragment() {
     lateinit var lstPlace: MutableList<Place>
@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
 
 
         val recyclerView =view.findViewById(R.id.recyclerview_id) as RecyclerView
-        val adapter = id.wisata.view.adapter.RecyclerViewAdapter(context, lstPlace)
+        val adapter = RecyclerViewAdapter(context, lstPlace)
         recyclerView.layoutManager = GridLayoutManager(context, 3)
         recyclerView.adapter = adapter
         return view
