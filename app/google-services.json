@@ -15,7 +15,6 @@
       },
       "oauth_client": [
         {
-<<<<<<< HEAD
           "client_id": "600089554892-h5ou2r3ohbc2hbhu5efujlpcdahvh7gq.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -24,8 +23,6 @@
           }
         },
         {
-=======
->>>>>>> 3a4cae283db3660e3fd9e9b59d58abdae83814ac
           "client_id": "600089554892-eaosg6lasvkdrqt93k2r62cgf2m3nl5b.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
