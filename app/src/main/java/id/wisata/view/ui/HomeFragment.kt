@@ -28,6 +28,8 @@ class HomeFragment : Fragment() {
         lstPlace.add(Place("Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
         lstPlace.add(Place("Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
         lstPlace.add(Place("Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
+        lstPlace.add(Place("Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
+        lstPlace.add(Place("Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
 
 
 
