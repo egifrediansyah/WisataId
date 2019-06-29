@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".view.ui.MainActivity">
         </activity>
+        <activity android:name=".view.ui.PlaceDetailActivity"></activity>
     </application>
 
 </manifest>

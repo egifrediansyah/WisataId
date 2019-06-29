@@ -1,6 +1,7 @@
 package id.wisata.view.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import id.wisata.R
 import id.wisata.service.model.Place
+import id.wisata.view.ui.PlaceDetailActivity
 
 class RecyclerViewAdapter(private val ctx: Context, private val data: List<Place>) :
     RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
@@ -27,6 +29,9 @@ class RecyclerViewAdapter(private val ctx: Context, private val data: List<Place
 
         myViewHolder.placeName.text = data[i].name
         myViewHolder.placePicture.setImageResource(data[i].imageUrl)
+        myViewHolder.placePicture.setOnClickListener {
+            ctx.startActivity(Intent(ctx, PlaceDetailActivity::class.java))
+        }
     }
 
     override fun getItemCount(): Int {

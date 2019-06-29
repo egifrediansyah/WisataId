@@ -11,9 +11,11 @@ import id.wisata.R
 
 class SearchFragment : Fragment() {
 
+
     @Nullable
     override fun onCreateView(inflater: LayoutInflater, @Nullable container: ViewGroup?, @Nullable savedInstanceState: Bundle?): View? {
         val view : View = inflater.inflate(R.layout.fragment_search, container, false)
         return view
+
     }
 }
