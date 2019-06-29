@@ -5,8 +5,10 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import id.wisata.R
-import android.support.annotation.NonNull
 import android.view.MenuItem
+import kotlinx.android.synthetic.main.fragment_home.*
+import kotlinx.android.synthetic.main.fragment_home.recyclerview_id
+import kotlinx.android.synthetic.main.fragment_left_nav.*
 
 
 class MainActivity : AppCompatActivity(),  BottomNavigationView.OnNavigationItemSelectedListener{
@@ -17,6 +19,7 @@ class MainActivity : AppCompatActivity(),  BottomNavigationView.OnNavigationItem
         loadFragment(HomeFragment())
         val bottomNavigationView : BottomNavigationView = findViewById(R.id.bn_main)
         bottomNavigationView.setOnNavigationItemSelectedListener(this)
+
     }
     private fun loadFragment(fragment: Fragment?): Boolean {
         if (fragment != null) {
@@ -33,7 +36,7 @@ class MainActivity : AppCompatActivity(),  BottomNavigationView.OnNavigationItem
         when (item.getItemId()) {
             R.id.home_menu -> fragment = HomeFragment()
             R.id.search_menu -> fragment = SearchFragment()
-//            R.id.left_nav -> fragment = LeftNavFragment()
+            R.id.left_nav -> fragment = LeftNavFragment()
 
         }
         return loadFragment(fragment)
