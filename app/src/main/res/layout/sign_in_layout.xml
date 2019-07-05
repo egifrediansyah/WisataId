@@ -9,13 +9,13 @@
         android:orientation="vertical"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".view.Login"
-        android:background="#00BFFF">
+        android:background="#EB467CE7">
 
     <android.support.v7.widget.CardView
             android:layout_width="340dp"
             android:layout_height="600dp"
             android:layout_gravity="center"
-            app:cardBackgroundColor="#6495ED"
+            app:cardBackgroundColor="#D05AB8BB"
             app:cardCornerRadius="@dimen/activity_vertical_margin"
     >
     <ImageView android:layout_width="match_parent"

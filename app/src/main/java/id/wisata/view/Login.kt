@@ -41,6 +41,9 @@ class Login  : AppCompatActivity() {
        sign_in_button.setOnClickListener{
             signIn()
         }
+        if (mAuth.currentUser  != null){
+            startActivity(Intent(this,MainActivity::class.java))
+        }
     }
 
 
