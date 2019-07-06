@@ -3,6 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
         android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
         tools:context=".view.ui.MainActivity"
 >
@@ -10,6 +11,7 @@
             android:id="@+id/fl_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#EB467CE7"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 
     <android.support.design.widget.BottomNavigationView
@@ -18,8 +20,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             app:menu="@menu/bottom_nav"
-            android:background="@color/colorPrimary"
-            app:itemTextColor="#fff"
+            android:background="#D05AB8BB"
+
             app:itemIconSize="@dimen/icon_size"
             app:itemIconTint="@color/fake"
             android:layout_gravity="bottom"
