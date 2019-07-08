@@ -9,11 +9,11 @@ import android.os.AsyncTask
 import id.wisata.data.PlaceInfoList
 import id.wisata.data.model.Place
 
-@Database(entities = [Place::class], version = 1)
+@Database(entities = [Place::class], version = 1, exportSchema = false)
 abstract class PlaceDB : RoomDatabase() {
     abstract fun placeDao(): PlaceDao
 
-    companion object {
+        companion object {
         private val lock = Any()
         private const val DB_NAME = "place.db"
         private var INSTANCE: PlaceDB? = null

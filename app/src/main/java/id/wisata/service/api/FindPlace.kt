@@ -24,7 +24,7 @@ class FindPlace {
 
                 val gson = GsonBuilder().create()
 
-                val place = gson.fromJson(body, Place::class.java)
+//                val place = gson.fromJson(body, Place::class.java)
             }
             override fun onFailure(call: Call, e: IOException) {
                 Log.e("eror", "Failed to execute request")

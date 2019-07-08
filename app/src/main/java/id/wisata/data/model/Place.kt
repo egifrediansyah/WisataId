@@ -12,9 +12,6 @@ class Place {
     var address: String = ""
     var rating: Float? = 0.0f
     @PrimaryKey(autoGenerate = true) var id: Int = 0
-    constructor() {
-
-    }
 
     constructor(id: Int, name: String, imageUrl: Int, address: String, rating: Float?) {
         this.id = id
