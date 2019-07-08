@@ -1,6 +1,8 @@
 package id.wisata.view.ui
 
 
+import android.arch.lifecycle.Observer
+import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.support.v4.app.Fragment
 import android.os.Bundle
@@ -11,50 +13,48 @@ import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.view.View
 import id.wisata.R
-import id.wisata.service.model.Place
-import java.util.ArrayList
+import id.wisata.data.model.Place
 import id.wisata.view.adapter.RecyclerViewAdapter
-import kotlinx.android.synthetic.main.fragment_home.*
+import id.wisata.viewModel.HomeViewModel
 
-class HomeFragment : Fragment() {
-    lateinit var lstPlace: MutableList<Place>
+class HomeFragment : Fragment(),RecyclerViewAdapter.OnItemClickListener {
+    override fun onItemClick(place: Place, itemView: View) {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+
+
     lateinit var recyclerView : RecyclerView
+    private lateinit var viewModel : HomeViewModel
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
+    }
 
     @Nullable
     override fun onCreateView(inflater: LayoutInflater, @Nullable container: ViewGroup?, @Nullable savedInstanceState: Bundle?): View? {
         val view : View = inflater.inflate(R.layout.fragment_home, container, false)
         val context = inflater.context
 
-        lstPlace = ArrayList()
-        lstPlace.add(Place(1,"Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(2, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(3, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(4, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(5, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(6, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(7, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(8, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(9, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(10, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(11, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(12, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(13, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(14, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(15, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(16, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(17, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(18, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(19, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(20 ,"Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
-        lstPlace.add(Place(21, "Gunung Api", R.drawable.mountain_example, "kedoya utara", 4.5f))
 
-         recyclerView =view.findViewById(R.id.recyclerview_id) as RecyclerView
-        val adapter = RecyclerViewAdapter(context, lstPlace)
+
+        recyclerView =view.findViewById(R.id.recyclerview_id) as RecyclerView
         recyclerView.layoutManager = GridLayoutManager(context, 3)
-        recyclerView.adapter = adapter
+
+
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.getPlaceList().observe(this, Observer<List<Place>>{
+                places->places?.let{
+            populatedPlaceList(places)
+        }
+        })
+    }
 
-
+    private fun populatedPlaceList(placeList: List<Place>){
+        recyclerView.adapter = RecyclerViewAdapter(requireActivity(), placeList, this)
+    }
 }

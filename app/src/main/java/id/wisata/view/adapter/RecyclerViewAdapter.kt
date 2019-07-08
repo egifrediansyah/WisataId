@@ -6,47 +6,49 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import id.wisata.R
-import id.wisata.service.model.Place
-import id.wisata.view.ui.PlaceDetailActivity
+import id.wisata.data.model.Place
+import kotlinx.android.synthetic.main.place_item_card_view.view.*
 
-class RecyclerViewAdapter(private val ctx: Context, private val data: List<Place>) :
-    RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+class RecyclerViewAdapter(private val ctx: Context,
+                          private  val items: List<Place>,
+                          private val clickListener: OnItemClickListener) :
+    RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>() {
 
-    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): MyViewHolder {
+
+    interface OnItemClickListener{
+        fun onItemClick(place: Place, itemView : View)
+    }
+
+    override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
 
         val view: View
         val inflater = LayoutInflater.from(ctx)
         view = inflater.inflate(R.layout.place_item_card_view, viewGroup, false)
 
-        return MyViewHolder(view)
+        return ViewHolder(view)
     }
 
 
-    override fun onBindViewHolder(myViewHolder: MyViewHolder, i: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, i: Int) {
 
-        myViewHolder.placeName.text = data[i].name
-        myViewHolder.placePicture.setImageResource(data[i].imageUrl)
-        myViewHolder.placePicture.setOnClickListener {
-            ctx.startActivity(Intent(ctx, PlaceDetailActivity::class.java))
-        }
+        (holder).bind(items[i], clickListener)
     }
 
     override fun getItemCount(): Int {
-        return data.size
+        return items.size
     }
 
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+        fun bind(place: Place, listener: OnItemClickListener) = with(itemView) {
+            itemView.placeName.text = place.name
+            placePicture.setImageDrawable(resources.getDrawable(place.imageUrl))
 
-        internal var placeName: TextView
-        internal var placePicture: ImageView
 
-        init {
 
-            placeName = itemView.findViewById<View>(R.id.placeName) as TextView
-            placePicture = itemView.findViewById<View>(R.id.placePicture) as ImageView
+            setOnClickListener {
+                listener.onItemClick(place, it)
+            }
         }
     }
 }
