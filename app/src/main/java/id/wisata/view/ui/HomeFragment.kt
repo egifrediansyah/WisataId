@@ -3,6 +3,7 @@ package id.wisata.view.ui
 
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.support.v4.app.Fragment
 import android.os.Bundle
 import android.support.annotation.Nullable
