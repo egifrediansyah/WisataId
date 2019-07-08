@@ -4,11 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.gms.google-services'
-<<<<<<< HEAD
 apply plugin: 'kotlin-kapt'
-=======
 
->>>>>>> 091c3e73b8cc0fc82a04f074509da13faa35de3c
 android {
     compileSdkVersion 28
     dataBinding {
