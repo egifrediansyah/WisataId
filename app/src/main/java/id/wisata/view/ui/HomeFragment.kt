@@ -12,6 +12,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.ViewGroup
 import android.view.LayoutInflater
 import android.view.View
+import androidx.navigation.findNavController
 import id.wisata.R
 import id.wisata.data.model.Place
 import id.wisata.view.adapter.RecyclerViewAdapter
@@ -19,7 +20,10 @@ import id.wisata.viewModel.HomeViewModel
 
 class HomeFragment : Fragment(),RecyclerViewAdapter.OnItemClickListener {
     override fun onItemClick(place: Place, itemView: View) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val detailBundle = Bundle().apply{
+            putInt(getString(R.string.place_id), place.id)
+        }
+        view?.findNavController()?.navigate(R.id.action_homeFragment_to_placeDetailActivity, detailBundle)
     }
 
 
